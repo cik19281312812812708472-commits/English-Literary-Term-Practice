@@ -17,7 +17,7 @@ import Foundation
 //MARK: 3. Clone this repository. (Just follow the steps)
 /// - Go to the Intergrate tab at the top of the screen, where the Apple logo is
 /// - Click and go down to the clone menu.
-/// - Paste  as the URL
+/// - Paste  this https://github.com/cik19281312812812708472-commits/English-Literary-Term-Practice as the URL
 ///
 //MARK: 4. If your macOS version is too old to run the app you need to change some things.
 /// - Go the file menu on the left and find the "mini" xcode app symbol
@@ -25,7 +25,7 @@ import Foundation
 /// - Under the targets menu press the "English Literary Term Practice"
 /// - Now look for minimun deployments
 /// - Find the text field for the macOS version and change it to your version.
-/// - If you dont understand this use this google doc for images:
+/// - If you dont understand this use this google doc for images: https://docs.google.com/document/d/1BO3Br5tWMgfneiLb-1_G-qizl73VOgtQB6PxC57nRKc/edit?tab=t.0
 ///
 //MARK: 5. Run the program.
 /// - Simply press Command + R to run.
@@ -35,7 +35,7 @@ import Foundation
 /// Btw, if you want a GUI version of this email me and I'll try to create one quickly
 ///
 //MARK: 6. What if you want to ommit questions you already know?
-/// - See that questionsOmmited below:
+/// - See that questionsOmitted below:
 /// - just type "." + the Literary term you want to ommit. Alliteration and metaphor are already ommited.
 /// - You also need commas at the end and you can use AI to help with bugs or email me.
 ///
@@ -46,7 +46,7 @@ import Foundation
 //MARK: HATE THIS?
 /// I am currently working on an app version.
 
-var questionsOmmited: [allQuestions] = [
+var questionsOmitted: [allQuestions] = [
     
     .Alliteration, .Metaphor
   
@@ -321,7 +321,7 @@ func createTest(numOfQuestions: Int) {
         
     for i in 0..<numOfQuestions + 1 {
         let theQuestion = allQuestionsCASES[i]
-        if questionsOmmited.contains(theQuestion) == false {
+        if questionsOmitted.contains(theQuestion) == false {
             
             
             
