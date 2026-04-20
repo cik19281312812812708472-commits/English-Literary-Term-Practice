@@ -43,7 +43,8 @@ import Foundation
 /// - See that "var numberOfQuestions: Int = 1" below:
 /// - Change the last number to alter the number of questions. e.g: var numberOfQuestions: Int = 67
 ///
-///
+//MARK: HATE THIS?
+/// I am currently working on an app version.
 
 var questionsOmmited: [allQuestions] = [
     
