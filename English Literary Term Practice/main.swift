@@ -48,7 +48,7 @@ import Foundation
 
 var questionsOmitted: [allQuestions] = [
     
-    .Alliteration, .Metaphor
+   .Alliteration, .Antagonist,
   
 ]
 
@@ -115,7 +115,7 @@ enum allQuestions: CaseIterable {
         case .Aside:
             return "Aside"
         case .Blank_verse:
-            return "Blank_verse"
+            return "Blank verse"
         case .Cacophony:
             return "Cacophony"
         case .Caesura:
@@ -123,7 +123,7 @@ enum allQuestions: CaseIterable {
         case .Colloquialism:
             return "Colloquialism"
         case .Comic_Relief:
-            return "Comic_Relief"
+            return "Comic Relief"
         case .Connotation:
             return "Connotation"
         case .Contrast:
@@ -135,7 +135,7 @@ enum allQuestions: CaseIterable {
         case .Diction:
             return "Diction"
         case .Dramatic_Irony:
-            return "Dramatic_Irony"
+            return "Dramatic Irony"
         case .Enjambement:
             return "Enjambement"
         case .Epithet:
@@ -169,7 +169,7 @@ enum allQuestions: CaseIterable {
         case .Paradox:
             return "Paradox"
         case .Pathetic_Fallacy:
-            return "Pathetic_Fallacy"
+            return "Pathetic Fallacy"
         case .Pathos:
             return "Pathos"
         case .Personification:
@@ -185,7 +185,7 @@ enum allQuestions: CaseIterable {
         case .Symbol:
             return "Symbol"
         case .Stock_Character:
-            return "Stock_Character"
+            return "Stock Character"
         case .Understatement:
             return "Understatement"
         }
@@ -296,7 +296,7 @@ struct questionBlueprint {
 }
 
 
-print("How many questison do you want?")
+//print("How many questison do you want?")
 
 
 
@@ -330,7 +330,7 @@ func createTest(numOfQuestions: Int) {
             
             
             let ran = Bool.random()
-            print(ran)
+            //print(ran)
             var answer = ""
             var actualQuestion: questionBlueprint
             if ran == true {
@@ -341,7 +341,7 @@ func createTest(numOfQuestions: Int) {
                 answer = theQuestion.questionWords
                 let questionWords = theQuestion.answer
                 actualQuestion = questionBlueprint(question: questionWords, answer: answer)
-                print(actualQuestion)
+              //  print(actualQuestion)
             }
             
             
