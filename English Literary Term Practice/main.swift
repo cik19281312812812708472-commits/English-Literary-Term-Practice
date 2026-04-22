@@ -317,6 +317,10 @@ func createTest(numOfQuestions: Int) {
         allQuestionsCASES.append(i)
     }
     
+    while allQuestionsCASES.count <= numOfQuestions + 1 {
+        allQuestionsCASES.append(allQuestionsCASES.randomElement()!)
+    }
+    
   
         
     for i in 0..<numOfQuestions + 1 {
