@@ -48,11 +48,11 @@ import Foundation
 
 var questionsOmitted: [allQuestions] = [
     
-   .Alliteration, .Antagonist,
-  
+    
+    
 ]
 
-var numberOfQuestions: Int = 50
+var numberOfQuestions: Int = 42
 
 
 
@@ -149,7 +149,7 @@ enum allQuestions: CaseIterable {
         case .Genre:
             return "Genre"
         case .Hamartia:
-            return "Hamartia"
+            return "Hamartia/Tragic Flaw"
         case .Hyperbole:
             return "Hyperbole"
         case .Imagery:
@@ -215,7 +215,7 @@ enum allQuestions: CaseIterable {
         case .Comic_Relief:
             return "A humorous scene introduced in the course of a serious work. Consciously introduced by the author to provide relief from emotional intensity and at the same time, by contrast, to heighten the seriousness of the story."
         case .Connotation:
-            return "An additional, suggested, or implied meaning of words.  Contrasts with denotation, which is the exact, literal meaning.  Connotations may change with time, place, and experience."
+            return "An additional, suggested, or implied meaning of words."
         case .Contrast:
             return "A rhetorical device by which one element is thrown into opposition to another for the sake of emphasis or clearness.  The effect is to make both ideas clearer than either would have been if described by itself.  Emphasis is on the differences."
         case .Couplet:
@@ -247,7 +247,7 @@ enum allQuestions: CaseIterable {
         case .Irony:
             return "Speech in which the actual intent is expressed in words that carry the opposite meaning."
         case .Juxtaposition:
-            return "The arrangement of two or more ideas, characters, actions, settings, phrases, or words side-by-side or in similar narrative moments for the purpose of comparison, contrast, rhetorical effect, suspense, or character development."
+            return "The arrangement of two or more ideas, characters, actions, settings, phrases, or words side-by-side or in similar narrative moments for the purpose of comparison, rhetorical effect, suspense, or character development."
         case .Metaphor:
             return "A figure of speech that is based on a comparison that is implied rather than directly or explicitly expressed.  It does not use a connector."
         case .Motif:
@@ -265,7 +265,7 @@ enum allQuestions: CaseIterable {
         case .Personification:
             return "A figure of speech that endows animals, ideas, and inanimate objects with human form, personality, or feelings."
         case .Protagonist:
-            return "The chief character in a play or story.  Usually the hero or heroine is the protagonist."
+            return "The chief character in a play or story."
         case .Pun:
             return "A play on words based on the similarity of sound between two words with different meanings.  "
         case .Simile:
@@ -277,7 +277,7 @@ enum allQuestions: CaseIterable {
         case .Stock_Character:
             return "A character whose actions or qualities make him/her appear as representative of a class or type."
         case .Understatement:
-            return "A form of irony in which something is intentionally represented as less than it is in fact."
+            return "something is intentionally represented as less than it is in fact."
         }
     }
     
@@ -321,15 +321,16 @@ func createTest(numOfQuestions: Int) {
         allQuestionsCASES.append(allQuestionsCASES.randomElement()!)
     }
     
-  
+    allQuestionsCASES.shuffle()
         
     for i in 0..<numOfQuestions + 1 {
         let theQuestion = allQuestionsCASES[i]
+        //this is very bad:
         if questionsOmitted.contains(theQuestion) == false {
             
             
             
-            let ran = Bool.random()
+            let ran = true //Bool.random()
             //print(ran)
             var answer = ""
             var actualQuestion: questionBlueprint
@@ -351,8 +352,10 @@ func createTest(numOfQuestions: Int) {
     
     
     
-    var amountCorrect: Int = 0
     
+    
+    var amountCorrect: Int = 0
+    var p: Int = 0
     for i in 0..<numOfQuestions {
         
         if i > test.count - 1 {
@@ -377,12 +380,12 @@ func createTest(numOfQuestions: Int) {
             
         }
         
-        
+        p += 1
     }
     
     
-    print("You have \(numOfQuestions - amountCorrect) questions out of \(numOfQuestions) wrong.")
-    let percentage: Double = Double(amountCorrect) / Double(numOfQuestions)
+    print("You have \(amountCorrect) questions out of \(p) wrong.")
+    let percentage: Double = Double(amountCorrect) / Double(p)
     print("Your Mark is \(percentage * 100)%")
     
     
